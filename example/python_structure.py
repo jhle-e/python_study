@@ -28,10 +28,20 @@ tuple4 = tuple1 * 5
 
 dic = {1: "my", 2: "name", 3: "is", 4: "python"}
 
-print(dic.keys()) # 1,2,3,4
+print(dic.keys())  # 1,2,3,4
 
-print(1 in dic.keys()) # true
+print(1 in dic.keys())  # true
 
-print(dic.values()) #[my, name, is, python]
+print(dic.values())  # [my, name, is, python]
 
-print(dic.items()) #[(key, value)]
+print(dic.items())  # [(key, value)]
+
+
+# map
+
+def function_demo(num):
+    return num - 1
+
+nums = [1,2,3,4,5]
+arr_list = list(map(function_demo,nums))
+
