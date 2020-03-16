@@ -9,6 +9,8 @@ tuple3 = tuple1 + tuple2
 tuple4 = tuple1 * 5
 
 # print(tuple1)
+# # tuple1[0] = 2 에러 변경 불가
+# print(tuple1)
 # print(tuple2)
 # print(tuple3)
 # print(tuple4)
@@ -20,6 +22,15 @@ tuple4 = tuple1 * 5
 # list는 딕셔너리의 key값(해쉬)으로 쓸 수 없지만 tuple은 가능 (딕셔너리의 키값은 불변한 값만 올 수 있기 때문)
 
 # list와 tuple의 차이 -> immutable, mutable, 속도 : list < tuple
+
+list1 = [1010, "list_study"]
+list2 = [99, 123032.3]
+
+print(list1)
+list1[0] = 777 #변경 가능ㄲ
+print(list1)
+print(list2)
+
 
 # dic
 # 중괄호를 사용 {}
