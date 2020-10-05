@@ -28,7 +28,7 @@ print('안녕\t')
 print('하세요')
 print("Hello \"w\"")
 
-# 문자열 포맷(변환문자 및
+# 문자열 포맷(변환문자)
 # 사용 x
 oldIntroduce = '%d세이고 키는 %.1fcm입니다.' % (32, 184.4)
 print(oldIntroduce)
@@ -37,6 +37,7 @@ newIntroduce = "{age}세이고 키는 {height}cm입니다.".format(age=32, heigh
 print(newIntroduce)
 
 # 문자열 함수
+# 길이
 str4 = "eheheasdk dfsak"
 print("str4 길이 : ", len(str4))
 # 일치하는 수 반환
