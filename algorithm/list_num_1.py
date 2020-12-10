@@ -34,16 +34,16 @@ n_2, k_2 = map(int, input().split())
 exam_start_time = time.time()
 exam_count = 0
 while True:
-    target = (n_2 // k_2) * k_2
-    exam_count += (n_2 - target)
-    n_2 = target
+    target = (n_2 // k_2) * k_2 # target = 나누어 0으로 떨어지는 수로 만들기 (k의 배수)
+    exam_count += (n_2 - target) # 여기서 나머지가 1이면 count + 1 0이면 count 0
+    n_2 = target # n_2를 타겟으로 변경 즉 위에 코드에서 -1 했다고 봐도 무방
     if n_2 < k_2:
         break
-    exam_count += 1
-    n_2 //= k_2
+    n_2 //= k_2 # target으로 만들어놓고 나누기
+    exam_count += 1 # count + 1
 
 exam_end_time = time.time()
-exam_count += (n_2 - 1)
+exam_count += (n_2 - 1) #마지막으로 남은 수 -1씩
 print(exam_count)
 print("%f초 걸렸습니다." % (exam_end_time - exam_start_time))
 
