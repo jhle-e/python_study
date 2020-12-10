@@ -7,11 +7,9 @@ import time
 # ex) N = 17 / K = 4일때 2번 조건이 되지 않으므로 1번 먼저 하고 16 % 4 = 0이기에 나누기 연산
 # 위처럼 연산을 반복하여 N이 결국 1로 되어지는 최소한의 횟수를 구하기
 # 입력조건  1 <= N <= 100,000 / 2 <= K <= 100,000
+n, k = map(int, input().split())
 
 start_time = time.time()
-
-n = 100000
-k = 144
 count = 0
 while True:
     if n == 1:
@@ -23,8 +21,31 @@ while True:
         n = n - 1
         count = count + 1
 
-
 end_time = time.time()
-
-print(count) #6분
+#
+print(count)  # 6분
 print("%f초 걸렸습니다." % (end_time - start_time))
+
+#6
+#0.000007초 걸렸습니다.
+
+n_2, k_2 = map(int, input().split())
+# 예제코드
+exam_start_time = time.time()
+exam_count = 0
+while True:
+    target = (n_2 // k_2) * k_2
+    exam_count += (n_2 - target)
+    n_2 = target
+    if n_2 < k_2:
+        break
+    exam_count += 1
+    n_2 //= k_2
+
+exam_end_time = time.time()
+exam_count += (n_2 - 1)
+print(exam_count)
+print("%f초 걸렸습니다." % (exam_end_time - exam_start_time))
+
+#6
+#0.000008초 걸렸습니다.
